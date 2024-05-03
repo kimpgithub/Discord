@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // 각 토글 버튼의 확장 상태를 개별적으로 관리합니다.
@@ -56,10 +57,27 @@ public class MainActivity extends AppCompatActivity {
                         updateToggleButtonIcon(toggleButton, isExpanded4);
                         break;
                 }
+                // hiddenItems 내부의 TextView에 클릭 리스너 설정
+                for (int i = 0; i < hiddenItems.getChildCount(); i++) {
+                    View child = hiddenItems.getChildAt(i);
+                    if (child instanceof TextView) {
+                        child.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String text = ((TextView) view).getText().toString();
+                                showToast(text);
+                            }
+                        });
+                    }
+                }
+
             }
         });
     }
 
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
     private void updateToggleButtonIcon(TextView button, boolean isExpanded) {
         int iconRes = isExpanded ? R.drawable.baseline_keyboard_arrow_down_24 : R.drawable.baseline_keyboard_arrow_right_24;
         button.setCompoundDrawablesRelativeWithIntrinsicBounds(iconRes, 0, 0, 0);
