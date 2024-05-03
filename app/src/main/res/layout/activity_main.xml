@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D3D3D3"
     android:orientation="horizontal">
 
     <!-- 좌측 채팅바 레이아웃 -->
@@ -12,36 +12,37 @@
         android:id="@+id/chatBarLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:background="#F0F0F0"
         android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:background="#F0F0F0">
+        android:orientation="vertical"
+        android:padding="4dp">
+
         <ImageButton
             android:id="@+id/intel_learn"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/icon_intel"
-            android:background="@drawable/rounded_corners"
             android:layout_marginTop="16dp"
-            android:contentDescription="intel" />
+            android:background="@drawable/rounded_corners"
+            android:contentDescription="intel"
+            android:src="@drawable/icon_intel" />
 
         <ImageButton
             android:id="@+id/addChatButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/baseline_add_24"
-            android:background="@drawable/circle_shape"
             android:layout_marginTop="16dp"
-            android:contentDescription="baseline_add_24" />
+            android:background="@drawable/circle_shape"
+            android:contentDescription="baseline_add_24"
+            android:src="@drawable/baseline_add_24" />
 
         <ImageButton
             android:id="@+id/networkButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/baseline_device_hub_24"
-            android:background="@drawable/circle_shape"
             android:layout_marginTop="12dp"
-            android:contentDescription="aseline_device_hub_24" />
+            android:background="@drawable/circle_shape"
+            android:contentDescription="aseline_device_hub_24"
+            android:src="@drawable/baseline_device_hub_24" />
     </LinearLayout>
 
     <!-- 기존 레이아웃을 포함하는 레이아웃 -->
@@ -51,369 +52,388 @@
         android:layout_weight="1"
         android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="서울 인텔 인공지능 인재양성 과정 2기 >"
-        android:textSize="18sp" />
-
-    <LinearLayout
-        android:id="@+id/buttonLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/searchButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_search"
-            android:text="검색하기" />
-
-        <ImageButton
-            android:id="@+id/profileButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/circle_shape"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_person" />
-
-
-        <ImageButton
-            android:id="@+id/calendarButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/circle_shape"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_calendar" />
-    </LinearLayout>
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/buttonLayout"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/darker_gray" />
-
-    <LinearLayout
-        android:id="@+id/toggleLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/divider"
-        android:layout_marginTop="10dp"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="vertical"
-        android:padding="16dp">
-
         <TextView
-            android:id="@+id/toggleButton1"
-            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
-            android:drawablePadding="8dp"
-            android:gravity="start|center_vertical"
-            android:text="확인해주세요!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="서울 인텔 인공지능 인재양성 과정 2기 >"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <LinearLayout
-            android:id="@+id/hiddenItems1"
+            android:id="@+id/buttonLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:layout_below="@id/textView"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="공지사항" />
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/toggleLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toggleLayout1"
-        android:layout_marginTop="10dp"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/toggleButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
-            android:drawablePadding="8dp"
-            android:gravity="start|center_vertical"
-            android:text="무엇이든 물어보세요!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-        <LinearLayout
-            android:id="@+id/hiddenItems2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="동기에게-물어봐" />
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/toggleLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toggleLayout2"
-        android:layout_marginTop="10dp"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/toggleButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
-            android:drawablePadding="8dp"
-            android:gravity="start|center_vertical"
-            android:text="열심히 교육받아요!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-        <LinearLayout
-            android:id="@+id/hiddenItems3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="인공지능-과정" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="앱-과정" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="프로젝트-과정" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/toggleLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toggleLayout3"
-        android:layout_marginTop="10dp"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/toggleButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
-            android:drawablePadding="8dp"
-            android:gravity="start|center_vertical"
-            android:text="친해져요!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-        <LinearLayout
-            android:id="@+id/hiddenItems4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="점심-추천해요" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 오프더레코드" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_numbers_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="정보-공유해요" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_campaign_24"
-                android:paddingStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp"
-                android:text="스터디실" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bottomButtonLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:weightSum="4">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_search"
+                android:text="검색하기" />
 
             <ImageButton
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
+                android:id="@+id/profileButton"
+                android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/baseline_maps_home_work_24" />
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/circle_shape"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_person" />
+
+
+            <ImageButton
+                android:id="@+id/calendarButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/circle_shape"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_calendar" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/buttonLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/toggleLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/toggleButton1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="서버" />
+                android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="확인해주세요!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/hiddenItems1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="공지사항"
+                    android:textColor="#000000" />
+
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/toggleLayout2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/baseline_message_24" />
+            android:layout_below="@id/toggleLayout1"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/toggleButton2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="메시지" />
+                android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="무엇이든 물어보세요!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/hiddenItems2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="동기에게-물어봐"
+                    android:textColor="#000000" />
+
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/toggleLayout3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/baseline_doorbell_24" />
+            android:layout_below="@id/toggleLayout2"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/toggleButton3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="알림" />
+                android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="열심히 교육받아요!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/hiddenItems3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="인공지능-과정"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="앱-과정"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+
+                    android:text="프로젝트-과정"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/toggleLayout4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/baseline_tag_faces_24" />
+            android:layout_below="@id/toggleLayout3"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/toggleButton4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="나" />
+                android:drawableStart="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:text="친해져요!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/hiddenItems4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="점심-추천해요"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:padding="8dp"
+                    android:text=" 오프더레코드"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_numbers_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="정보-공유해요"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_campaign_24"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="스터디실"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottomButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_maps_home_work_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="서버"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_message_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="메시지"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_doorbell_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="알림"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_tag_faces_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="나"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
