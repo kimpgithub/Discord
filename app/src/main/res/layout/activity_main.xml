@@ -94,8 +94,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 공지사항" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="공지사항" />
+
 
         </LinearLayout>
     </LinearLayout>
@@ -133,8 +137,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 동기에게-물어봐" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="동기에게-물어봐" />
+
+
         </LinearLayout>
     </LinearLayout>
 
@@ -171,22 +180,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 인공지능-과정" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="인공지능-과정" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 앱-과정" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="앱-과정" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 프로젝트-과정" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="프로젝트-과정" />
 
         </LinearLayout>
     </LinearLayout>
@@ -224,8 +242,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 점심-추천해요" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="점심-추천해요" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -238,15 +259,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_numbers_24"
-                android:padding="8dp"
-                android:text=" 정보-공유해요" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="정보-공유해요" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_campaign_24"
-                android:padding="8dp"
-                android:text=" 스터디실" />
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="스터디실" />
 
         </LinearLayout>
     </LinearLayout>
