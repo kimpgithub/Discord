@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="horizontal">
+
+    <!-- 좌측 채팅바 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/chatBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:background="#F0F0F0">
+        <ImageButton
+            android:id="@+id/intel_learn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icon_intel"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="16dp"
+            android:contentDescription="intel" />
+
+        <ImageButton
+            android:id="@+id/addChatButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_add_24"
+            android:background="@drawable/circle_shape"
+            android:layout_marginTop="16dp"
+            android:contentDescription="baseline_add_24" />
+
+        <ImageButton
+            android:id="@+id/networkButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_device_hub_24"
+            android:background="@drawable/circle_shape"
+            android:layout_marginTop="12dp"
+            android:contentDescription="aseline_device_hub_24" />
+    </LinearLayout>
+
+    <!-- 기존 레이아웃을 포함하는 레이아웃 -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="16dp">
 
     <TextView
         android:id="@+id/textView"
@@ -13,7 +59,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="서울 인텔 인공지능 인재양성 과정 2기 >"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"
@@ -369,3 +415,5 @@
     </LinearLayout>
 
 </RelativeLayout>
+
+</LinearLayout>
